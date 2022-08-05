@@ -1,0 +1,52 @@
+{
+  "name": "starter-ts-monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@7.8.0",
+  "description": "",
+  "author": "starknt",
+  "license": "MIT",
+  "keywords": [
+    "ts",
+    "typescript",
+    "vite",
+    "vitest",
+    "monorepo",
+    "pnpm",
+    "ci"
+  ],
+  "scripts": {
+    "new": "esno ./scripts/new.ts",
+    "stub": "pnpm -r stub",
+    "build": "pnpm -r build",
+    "test": "vitest",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.25.2",
+    "@types/node": "^18.6.4",
+    "eslint": "^8.21.0",
+    "esno": "^0.16.3",
+    "lint-staged": "^13.0.3",
+    "pnpm": "^7.8.0",
+    "simple-git-hooks": "^2.8.0",
+    "typescript": "^4.7.4",
+    "unbuild": "^0.7.6",
+    "vite": "^3.0.4",
+    "vitest": "^0.20.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{ts, tsx, js, jsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{json, yml, yaml}": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
