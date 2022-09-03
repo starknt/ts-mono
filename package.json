@@ -16,6 +16,7 @@
     "ci"
   ],
   "scripts": {
+    "dev": "pnpm -C playground dev",
     "new": "esno ./scripts/new.ts",
     "stub": "pnpm -r stub",
     "build": "pnpm -r build",
