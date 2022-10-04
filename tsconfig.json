@@ -6,6 +6,8 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "baseUrl": ".",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
     "paths": {
       "@pkg/core": ["./packages/core/src/index.ts"]
     }
